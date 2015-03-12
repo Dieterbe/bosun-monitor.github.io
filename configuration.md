@@ -455,7 +455,7 @@ Returns the value from the series at the percentile p. Min and Max can be simula
 
 #### since(series)
 
-Returns the number of seconds since the latest data point not more than duration old.
+Returns the number of seconds since the most recent data point in the series.
 
 #### streak(series)
 
