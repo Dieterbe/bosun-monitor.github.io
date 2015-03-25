@@ -28,7 +28,10 @@ Every variable is optional, though you should enable at least 1 backend.
 
 #### backends
 
-* tsdbHost: OpenTSDB host. Must be GZIP-aware (use the [next branch](https://github.com/opentsdb/opentsdb/tree/next)). Can specify both host and port: `tsdb-host:4242`. Defaults to port 4242 if no port specified.
+* tsdbHost: OpenTSDB host. Must be GZIP-aware (use the [next branch](https://github.com/opentsdb/opentsdb/tree/next)). Can specify both host and port: `tsdb-host:4242`. Defaults to port 4242 if no port specified. If you use opentsdb without relaying the data through Bosun currently the following won't work (and this isn't something we officially suport):
+  * Tag value glob matching, for example `avg:metric.name{tag=something-*}`. However single asterists like `tag=*` will stil work.
+  * The items page.
+  * The graph page's tag list.
 * graphiteHost: Graphite host. Same format as tsdbHost.
 * logstashElasticHost: Elasticsearch host populated by logstash. Same format as tsdbHost.
 
