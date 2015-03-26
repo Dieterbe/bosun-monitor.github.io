@@ -48,6 +48,7 @@ Every variable is optional, though you should enable at least 1 backend.
 * squelch: see [alert squelch](#squelch)
 * stateFile: bosun state file, defaults to `bosun.state`
 * unknownTemplate: name of the template for unknown alerts
+* shortURLKey: goo.gl API key, needed if you hit usage limits when using the short link button
 
 #### SMTP Authentication
 
