@@ -550,6 +550,14 @@ Returns the absolute value of the number.
 
 Returns the number of seconds of the [OpenTSDB duration string](http://opentsdb.net/docs/build/html/user_guide/query/dates.html).
 
+#### dropge(series, number)
+
+Remove any values greater than or equal to number from a series. Will error if this operation results in an empty series.
+
+#### drople(series, number)
+
+Remove any values lower than or equal to number from a series. Will error if this operation results in an empty series.
+
 #### dropna(series)
 
 Remove any NaN or Inf values from a series. Will error if this operation results in an empty series.
